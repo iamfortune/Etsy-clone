@@ -50,19 +50,19 @@ export default {
         },
         {
           url: 'https://images.unsplash.com/photo-1599599810769-bcde5a160d32?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1489&q=80',
-          name: 'mask'
+          name: 'Chocolate'
         },
         {
           url: 'https://images.unsplash.com/photo-1595121574471-5e57fec127df?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80',
-          name: 'mask'
+          name: 'soap'
         },
         {
           url: 'https://images.unsplash.com/photo-1562157873-818bc0726f68?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1482&q=80',
-          name: 'mask'
+          name: 'cloth'
         },
         {
           url: 'https://images.unsplash.com/photo-1579921562928-44fea413b026?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1534&q=80',
-          name: 'mask'
+          name: 'Necklace'
         }
       ]
     }

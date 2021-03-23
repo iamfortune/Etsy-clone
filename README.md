@@ -1,7 +1,7 @@
 # Build an Etsy clone with Vue and firebase
 
 This example shows how to build an Etsy clone with chatting features
-[Imgur](https://i.imgur.com/qloHQUU.png)
+![Imgur](https://i.imgur.com/gCBC3iy.png)
 ## Technology
 This demo uses:
 * CometChat Pro

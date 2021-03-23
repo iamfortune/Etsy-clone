@@ -14,7 +14,7 @@ To run the demo follow these steps:
 1. [Head to CometChat Pro and create an account](https://www.cometchat.com).
 2. From the [dashboard](https://app.cometchat.com), create a new app called "Etsy-clone".
 4. Download the repository [here](https://github.com/iamfortune/Etsy-clone) and open it on your code editor
-3. Get your **API Keys** from your dashboard
+3. Get the appId, region and auth_key for of the newly created “Etsy-clone” app on the CometChat Pro Dashboard.
 4. `yarn install` to install all dependencies
 5. `npx json-server --watch mockData.json` to watch mock server
 6. `yarn server` to compile and hot reload for development

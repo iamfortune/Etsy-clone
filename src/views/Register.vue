@@ -37,7 +37,8 @@
 <script>
 import firebase from 'firebase/app'
 import 'firebase/auth'
-  import { CometChat } from '@cometchat-pro/chat'
+import {AUTH_KEY} from '../const'
+import { CometChat } from '@cometchat-pro/chat'
 export default {
   data() {
   return {
@@ -54,9 +55,8 @@ methods:{
      this.name   = this.email.substring(0, email.lastIndexOf("@"));
      this.$router.replace({ name: "login" });
      const user = new CometChat.User(this.email);
-const apiKey = process.env.VUE_APP_COMETCHAT_API_KEY
 
-CometChat.createUser(user, apiKey).then(
+CometChat.createUser(user, AUTH_KEY).then(
     user => {
         console.log("user created", user);
     },error => {

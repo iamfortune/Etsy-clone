@@ -3,6 +3,7 @@ import App from './App.vue'
 import router from './router'
 import firebase from 'firebase/app'
 import { CometChat } from '@cometchat-pro/chat'
+import { AUTH_KEY, APP_ID,REGION } from './const'
 
 import 'tailwindcss/tailwind.css'
 
@@ -10,22 +11,20 @@ Vue.config.productionTip = false
 
 const firebaseConfig = {
    apiKey: "AIzaSyDaxAj6IDIXz3Fi13yycyJtwTE3S2XMI70",
-   authDomain: "etsy-clone-faf39.firebaseapp.com",
+   authDomain: "etsy-hdhsirebaseapp.com",
    projectId: "etsy-clone-faf39",
-   storageBucket: "etsy-clone-faf39.appspot.com",
+   storageBucket: "etsyne-faf39.appspot.com",
    messagingSenderId: "828703135046",
    appId: "1:828703135046:web:b9aec5771661dafaef0147"
  };
  // Initialize Firebase
  firebase.initializeApp(firebaseConfig);
 
-const { VUE_APP_COMETCHAT_APP_ID, VUE_APP_COMETCHAT_REGION } = process.env
-
 const cometChatAppSetting = new CometChat.AppSettingsBuilder()
   .subscribePresenceForAllUsers()
-  .setRegion(VUE_APP_COMETCHAT_REGION)
+  .setRegion(REGION)
   .build()
-CometChat.init(VUE_APP_COMETCHAT_APP_ID, cometChatAppSetting).then(
+CometChat.init(APP_ID, cometChatAppSetting).then(
   () => {
     console.log('Initialization completed successfully')
 

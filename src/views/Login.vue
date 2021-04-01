@@ -34,6 +34,7 @@
   <script>
   import firebase from 'firebase/app'
   import 'firebase/auth'
+  import {AUTH_KEY} from '../const'
   import { CometChat } from '@cometchat-pro/chat'
   export default {
     data() {
@@ -55,9 +56,9 @@
           console.log(this.UID)
           const user = new CometChat.User(UID);
           user.setName(this.email);
-          CometChat.createUser(user, apiKey).then(
+          CometChat.createUser(user, AUTH_KEY).then(
               user => {
-                CometChat.login(this.UID, apiKey).then(
+                CometChat.login(this.UID, AUTH_KEY).then(
                   user => {
                     console.log("Login Successful:", { user });
                   },
@@ -67,7 +68,7 @@
                 );
                   console.log("user created", user);
               },error => {
-                CometChat.login(this.UID, apiKey).then(
+                CometChat.login(this.UID, AUTH_KEY).then(
                   user => {
                     console.log("Login Successful:", { user });
                   },
@@ -82,7 +83,6 @@
         .catch(error => {
           this.error = error;
         })
-      const apiKey = process.env.VUE_APP_COMETCHAT_API_KEY
       const UID = firebase.auth().currentUser.uid
       console.log(UID);
 

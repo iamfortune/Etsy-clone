@@ -17,7 +17,7 @@ To run the demo follow these steps:
 3. Get the appId, region and auth_key for of the newly created “Etsy-clone” app on the CometChat Pro Dashboard.
 4. `yarn install` to install all dependencies
 5. `npx json-server --watch mockData.json` to watch mock server
-6. `yarn server` to compile and hot reload for development
+6. `yarn serve` to compile and hot reload for development
 
 
 ## Useful links

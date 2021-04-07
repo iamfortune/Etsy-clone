@@ -65,7 +65,7 @@ CometChat.createUser(user, AUTH_KEY).then(
 )
 
    } catch (e) {
-     console.log(e);
+     console.log("");
    }
   }
 }

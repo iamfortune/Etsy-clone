@@ -1,11 +1,12 @@
 export const userScreenStyle = (theme) => {
   return {
     display: "flex",
-    height: "100%",
+    height: "100vh",
     width: "100%",
     boxSizing: "border-box",
     fontFamily: `${theme.fontFamily}`,
     "--cometchat-font-family": `${theme.fontFamily}`,
+    backgroundColor: "#f9f9ff"
   };
 };
 
@@ -27,6 +28,7 @@ export const userScreenSidebarStyle = (theme, sidebarView) => {
     flexDirection: "column",
     "--cometchat-contacts-sidebar-left": "-100%",
     "--cometchat-contacts-sidebar-bg": `${theme.backgroundColor.white}`,
+    backgroundColor: "white",
     ...sidebar,
   };
 };
@@ -44,7 +46,6 @@ export const userScreenMainStyle = (threadMessageView, detailView) => {
 
   return {
     width: "calc(100% - 280px)",
-    height: "100%",
     order: "2",
     ...secondaryView,
   };

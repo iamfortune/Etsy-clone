@@ -26,7 +26,7 @@ export const messageTextWrapperStyle = (theme) => {
   return {
     display: "inline-block",
     borderRadius: "12px",
-    backgroundColor: `${theme.backgroundColor.blue}`,
+    background: `linear-gradient(90deg, rgba(233, 12, 119, 1) 0%, rgba(241, 96, 89, 1) 100% )`,
     color: `${theme.color.white}`,
     padding: "8px 12px",
     alignSelf: "flex-end",

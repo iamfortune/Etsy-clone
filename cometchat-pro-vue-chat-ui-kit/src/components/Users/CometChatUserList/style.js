@@ -14,6 +14,7 @@ export const contactHeaderStyle = ({ color }) => {
     display: "flex",
     alignItems: "center",
     borderBottom: `1px solid ${color.darkSecondary}`,
+    background: `linear-gradient(90deg, rgba(233, 12, 119, 1) 0%, rgba(241, 96, 89, 1) 100% )`,
   };
 };
 
@@ -43,6 +44,8 @@ export const contactHeaderTitleStyle = (enableCloseMenu) => {
     width: "66%",
     textAlign: "left",
     fontSize: "20px",
+    color: "white",
+    textDecoration: "none",
     ...alignment,
   };
 };

@@ -51,42 +51,34 @@
         :style="styles.videoCallOption"
         @click="emitAction('videoCall')"
       ></span>
-      <span
+      <!-- <span
         class="cometchat_chat_option"
         :style="styles.detailPaneOption"
         @click="emitAction('viewDetail')"
-      ></span>
+      ></span> -->
     </div>
   </div>
 </template>
 
 <script>
 import dateFormat from "dateformat";
-
 import {
   COMETCHAT_CONSTANTS,
   DEFAULT_STRING_PROP,
   DEFAULT_OBJECT_PROP,
   DEFAULT_BOOLEAN_PROP,
 } from "../../../resources/constants";
-
 import { cometChatCommon, propertyCheck, tooltip } from "../../../mixins/";
 import { MessageHeaderManager } from "./controller";
 import { SvgAvatar } from "../../../util/svgavatar";
-
 import { CometChatAvatar, CometChatUserPresence } from "../../Shared";
-
 import * as enums from "../../../util/enums.js";
-
 import menuIcon from "./resources/menuicon.png";
 import audioCallIcon from "./resources/audio.png";
 import videoCallIcon from "./resources/video.png";
 import detailPaneIcon from "./resources/detailpane.png";
-
 import * as style from "./style";
-
 let messageHeaderManager;
-
 /**
  * Displays message info in header.
  *
@@ -111,7 +103,6 @@ export default {
     /**
      * Theme of the UI.
      */
-
     theme: { ...DEFAULT_OBJECT_PROP },
     /**
      * Whether to show sidebar.
@@ -139,7 +130,6 @@ export default {
         }
         messageHeaderManager = new MessageHeaderManager();
         messageHeaderManager.attachListeners(this.updateHeaderHandler);
-
         if (this.type === "user" && oldValue.uid !== newValue.uid) {
           this.setStatusForUser();
         } else if (
@@ -225,7 +215,6 @@ export default {
     setStatusForUser() {
       let status = this.item.status;
       const presence = this.item.status === "online" ? "online" : "offline";
-
       if (this.item.status === "offline" && this.item.lastActiveAt) {
         status =
           COMETCHAT_CONSTANTS.LAST_ACTIVE_AT +
@@ -233,7 +222,6 @@ export default {
       } else if (this.item.status === "offline") {
         status = "offline";
       }
-
       this.status = status;
       this.presence = presence;
     },
@@ -271,7 +259,6 @@ export default {
           ) {
             let membersCount = parseInt(item.membersCount);
             const status = `${membersCount} members`;
-
             this.status = status;
           }
           break;
@@ -279,7 +266,6 @@ export default {
           if (this.type === "group" && this.item.guid === item.guid) {
             let membersCount = parseInt(item.membersCount);
             const status = `${membersCount} members`;
-
             this.status = status;
           }
           break;
@@ -287,7 +273,6 @@ export default {
           if (this.type === "group" && this.item.guid === item.guid) {
             let membersCount = parseInt(item.membersCount);
             const status = `${membersCount} members`;
-
             this.status = status;
           }
           break;
@@ -305,7 +290,6 @@ export default {
           ) {
             this.status = COMETCHAT_CONSTANTS.TYPING;
           }
-
           this.emitAction("showReaction", { reaction: item });
           break;
         }
@@ -328,7 +312,6 @@ export default {
               this.setStatusForUser();
             }
           }
-
           this.emitAction("stopReaction", { reaction: item });
           break;
         }
@@ -340,7 +323,6 @@ export default {
   beforeMount() {
     messageHeaderManager = new MessageHeaderManager();
     messageHeaderManager.attachListeners(this.updateHeaderHandler);
-
     if (this.type === "user") {
       this.setStatusForUser();
     } else {
@@ -371,3 +353,4 @@ export default {
   }
 }
 </style>
+view raw

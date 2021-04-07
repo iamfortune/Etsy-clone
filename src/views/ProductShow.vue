@@ -36,19 +36,20 @@
       <button type="submit" name="button">send</button>
     </form>
 
-    <CometChatUI :currentUser="currentUser"/>
+   <CometChatUserListWithMessages />
+
   </div>
 </template>
 
 <script>
 import firebase from 'firebase/app'
 import 'firebase/auth'
-import  { CometChatUI }  from "../../cometchat-pro-vue-chat-ui-kit";
+import  { CometChatUserListWithMessages }  from "../../cometchat-pro-vue-chat-ui-kit";
 import { CometChat } from '@cometchat-pro/chat'
 import productService from '@/Services/productService'
 export default {
   components:{
-      CometChatUI,
+      CometChatUserListWithMessages,
   },
   props: ['id'],
   data () {

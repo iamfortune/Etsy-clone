@@ -52,8 +52,8 @@ methods:{
    try {
      const appUser = firebase.auth().createUserWithEmailAndPassword(this.email,this.password)
      console.log(appUser)
-     this.name   = this.email.substring(0, email.lastIndexOf("@"));
      this.$router.replace({ name: "login" });
+     this.name   = this.email.substring(0, email.lastIndexOf("@"));
      const user = new CometChat.User(this.email);
 
 CometChat.createUser(user, AUTH_KEY).then(

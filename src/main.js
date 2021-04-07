@@ -6,15 +6,10 @@ import 'firebase/auth';
 import { CometChat } from '@cometchat-pro/chat'
 import 'tailwindcss/tailwind.css'
 
-import { APP_ID, REGION, APIKEY,AUTHDOMAIN,PROJECTID,STORAGEBUCKET,MESSAGINGSENDERID,APPID } from './const'
+import { APP_ID, REGION, AUTH_KEY } from './const'
 Vue.config.productionTip = false
 const firebaseConfig = {
-  apiKey: APIKEY,
-  authDomain: AUTHDOMAIN,
-  projectId: PROJECTID,
-  storageBucket: STORAGEBUCKET,
-  messagingSenderId: MESSAGINGSENDERID,
-  appId: APPID,
+  // FIREBASE CREDENTIALS HERE
 }
  // Initialize Firebase
  firebase.initializeApp(firebaseConfig);

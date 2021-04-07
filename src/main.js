@@ -9,17 +9,6 @@ import 'tailwindcss/tailwind.css'
 
 Vue.config.productionTip = false
 
-const firebaseConfig = {
-   apiKey: "AIzaSyDaxAj6IDIXz3Fi13yycyJtwTE3S2XMI70",
-   authDomain: "etsy-hdhsirebaseapp.com",
-   projectId: "etsy-clone-faf39",
-   storageBucket: "etsyne-faf39.appspot.com",
-   messagingSenderId: "828703135046",
-   appId: "1:828703135046:web:b9aec5771661dafaef0147"
- };
- // Initialize Firebase
- firebase.initializeApp(firebaseConfig);
-
 const cometChatAppSetting = new CometChat.AppSettingsBuilder()
   .subscribePresenceForAllUsers()
   .setRegion(REGION)

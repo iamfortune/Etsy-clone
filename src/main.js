@@ -15,7 +15,6 @@ const firebaseConfig = {
   messagingSenderId: MESSAGINGSENDERID,
   appId: APPID,
 }
-console.log(firebaseConfig)
  // Initialize Firebase
  firebase.initializeApp(firebaseConfig);
  const auth = firebase.auth()

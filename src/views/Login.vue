@@ -76,7 +76,7 @@
                     console.log("Login failed with exception:", { error });
                   }
                 );
-                  console.log("error", error);
+                  console.log("");
               }
           )
         })

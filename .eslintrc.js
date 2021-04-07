@@ -1,12 +1,17 @@
 module.exports = {
   root: true,
   env: {
-    node: true
+    node: true,
+    "es6": true
   },
   extends: [
   ],
   parserOptions: {
-    parser: 'babel-eslint'
+    parser: 'babel-eslint',
+    "parserOptions": {
+      "sourceType": "module",
+      "allowImportExportEverywhere": true
+    }  
   },
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',

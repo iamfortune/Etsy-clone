@@ -54,7 +54,7 @@
           console.log(firebase.auth().currentUser.uid);
           this.UID = firebase.auth().currentUser.uid
           console.log(this.UID)
-          const user = new CometChat.User(UID);
+          const user = new CometChat.User(UID); 
           user.setName(this.email);
           CometChat.createUser(user, AUTH_KEY).then(
               user => {

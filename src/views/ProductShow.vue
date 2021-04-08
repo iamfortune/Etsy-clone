@@ -11,7 +11,7 @@
       </div>
       <div class="ml-32 text-left">
         <h1 class="text-lg">{{ product.seller }}</h1>
-        <p class="text-xs mb-4">308 sales</p>
+        <p class="text-xs mb-4">308 sales.</p>
         <h1 class="text-3xl">{{ product.prodName }}</h1>
         <h1 class="text-4xl font-bold mt-4">{{ product.price }}</h1>
         <p class="text-xs mb-4">Local taxes included (where applicable)
@@ -25,18 +25,7 @@
        </div>
       </div>
     </div>
-    <form @submit.prevent="sendMessage">
-
-      <input
-      type="text"
-      class="block border border-grey-light w-full p-3 rounded mb-4"
-      name="message"
-      v-model="message"
-      placeholder="type message" />
-      <button type="submit" name="button">send</button>
-    </form>
-
-   <CometChatUserListWithMessages />
+   <CometChatUI />
 
   </div>
 </template>
@@ -44,12 +33,12 @@
 <script>
 import firebase from 'firebase/app'
 import 'firebase/auth'
-import  { CometChatUserListWithMessages }  from "../../cometchat-pro-vue-chat-ui-kit";
+import  { CometChatUI }  from "../../cometchat-pro-vue-chat-ui-kit";
 import { CometChat } from '@cometchat-pro/chat'
 import productService from '@/Services/productService'
 export default {
   components:{
-      CometChatUserListWithMessages,
+      CometChatUI,
   },
   props: ['id'],
   data () {
